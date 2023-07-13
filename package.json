@@ -1,0 +1,25 @@
+{
+  "name": "svg_generator",
+  "version": "1.0.0",
+  "description": "A command line application to generate an SVG corporate logo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicholas-Gregory/SVG_Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicholas-Gregory/SVG_Generator/issues"
+  },
+  "homepage": "https://github.com/Nicholas-Gregory/SVG_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
