@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 
+const fs = require("fs");
+
 const shapes = require("./lib/shapes.js");
 
 const questions = [
@@ -34,8 +36,16 @@ const handleAnswers = answers => {
     let shape;
     switch (answers.shape) {
         case "Circle":
-            
+            shape = new shapes.Circle(answers.characters, answers.shapeColor, answers.textColor);
+            break;
+        case "Triangle":
+            shape = new shapes.Triangle(answers.characters, answers.shapeColor, answers.textColor);
+            break;
+        case "Square":
+            shape = new shapes.Square(answers.characters, answers.shapeColor, answers.textColor);
     }
+
+    fs.writeFile("./outpus.svg", shape.render(), "utf-8", err => err ? console.log(err) : console.log("Success"));
 }
 
 inquirer.prompt(questions).then(answers => handleAnswers(answers));
