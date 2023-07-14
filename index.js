@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 
+const shapes = require("./lib/shapes.js");
+
 const questions = [
     {
         type: "input",
@@ -29,7 +31,11 @@ const questions = [
 ];
 
 const handleAnswers = answers => {
-
+    let shape;
+    switch (answers.shape) {
+        case "Circle":
+            
+    }
 }
 
 inquirer.prompt(questions).then(answers => handleAnswers(answers));
