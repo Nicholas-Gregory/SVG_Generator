@@ -45,7 +45,7 @@ const handleAnswers = answers => {
             shape = new shapes.Square(answers.characters, answers.shapeColor, answers.textColor);
     }
 
-    fs.writeFile("./outpus.svg", shape.render(), "utf-8", err => err ? console.log(err) : console.log("Success"));
+    fs.writeFile("./output.svg", shape.render(), "utf-8", err => err ? console.log(err) : console.log("Success"));
 }
 
 inquirer.prompt(questions).then(answers => handleAnswers(answers));
